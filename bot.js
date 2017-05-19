@@ -90,9 +90,16 @@ const actions = {
         context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       else {
-        context.anstext = "Sorry I did not understand that. Please be more specific";
+        context.anstext = "I'm confused";
       }
       cb(context);
+
+  },
+  ['default-reply'](sessionId, context, cb) {
+
+        const text = db.default_replies;
+        context.anstext = text[Math.floor(Math.random() * text.length)];
+        cb(context);
 
   },
 };

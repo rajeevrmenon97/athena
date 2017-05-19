@@ -60,7 +60,13 @@ const EventSchedule = {
   ],
 };
 
+const DefaultReplies = [
+  "Sorry. I didn\'t get that",
+  "I\'m a bit confused",
+]
+
 module.exports = {
   desc: EventDescriptions,
   time: EventSchedule,
+  default_replies: DefaultReplies,
 };
