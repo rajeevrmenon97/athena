@@ -112,8 +112,14 @@ const actions = {
   },
   ['default-reply'](sessionId, context, cb) {
 
+    if (context.evnt){
+      const text = db.desc[context.evnt || 'default'];
+      context.anstext = text;
+    }
+    else {
         const text = db.default_replies;
         context.anstext = text[Math.floor(Math.random() * text.length)];
+    }
         cb(context);
 
   },
