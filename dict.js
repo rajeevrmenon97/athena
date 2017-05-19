@@ -17,6 +17,8 @@ const EventDescriptions = {
     'Blitzkrieg description',
   wheels:
     'Wheels description',
+  events:
+    'Variety of events for tathva',
   default:
     'I don\'t know what that is, but I can tell you about the events in Tathva 17',
 };
@@ -38,6 +40,8 @@ const EventSchedule = {
     'Blitzkrieg time',
   wheels:
     'Wheels time',
+  events:
+    'across three days of tathva',
   default:
     'I don\'t know when that is, but I can tell you when the events in Tathva 17 are!',
 };

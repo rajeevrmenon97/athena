@@ -144,7 +144,7 @@ const actions = {
         context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       else {
-        context.anstext = "Didn\'t get you there?";
+        context.anstext = "Didn\'t get you there!";
       }
       cb(context);
 
