@@ -72,6 +72,21 @@ const actions = {
     else {
       delete context.evnt;
     }
+
+    const greet = firstEntityValue(entities, 'greeting');
+    if (greet) {
+      context.greet = greet;
+    }
+    else {
+      delete context.greet;
+    }
+    const senti = firstEntityValue(entities, 'sentiment');
+    if (senti) {
+      context.senti = senti;
+    }
+    else {
+      delete context.senti;
+    }
     cb(context);
   },
 
@@ -83,11 +98,11 @@ const actions = {
 
       if(context.qstn == "what") {
         const text = db.desc[context.evnt || 'default'];
-        context.anstext = text[0];
+        context.anstext = text;
       }
       else if (context.qstn == "when"){
         const text = db.time[context.evnt || 'default'];
-        context.anstext = text[0];
+        context.anstext = text;
       }
       else {
         context.anstext = "Please be more specific!";
@@ -99,13 +114,39 @@ const actions = {
 
     if (context.evnt){
       const text = db.desc[context.evnt || 'default'];
-      context.anstext = text[0];
+      context.anstext = text;
     }
     else {
         const text = db.default_replies;
         context.anstext = text[Math.floor(Math.random() * text.length)];
     }
         cb(context);
+
+  },
+
+  ['greeting-reply'](sessionId, context, cb) {
+
+      if(context.greet == "hello") {
+        const text = db.greets[context.greet || "hello"];
+        context.anstext = text[Math.floor(Math.random() * text.length)];
+      }
+      else {
+        const text = db.greets[context.greet || "sup"];
+        context.anstext = text[Math.floor(Math.random() * text.length)];
+      }
+      cb(context);
+
+  },
+  ['get-emotion'](sessionId, context, cb) {
+
+      if(context.senti) {
+        const text = db.emo[context.senti || "cool"];
+        context.anstext = text[Math.floor(Math.random() * text.length)];
+      }
+      else {
+        context.anstext = "Didn\'t get you there?";
+      }
+      cb(context);
 
   },
 };

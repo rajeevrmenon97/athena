@@ -1,63 +1,45 @@
 'use strict';
 
 const EventDescriptions = {
-  tathva: [
+  tathva:
     'Tathva is an annual techno-management festival, organized by the National Institute of Technology Calicut at Kozhikode, in Kerala, India, in the month of September or October. It is one of the biggest technical festivals in South India.',
-  ],
-  workshops: [
+  workshops:
     'Workshop description',
-  ],
-  adizya: [
+  adizya:
     'Adizya description',
-  ],
-  proshow: [
+  proshow:
     'Proshow description',
-  ],
-  bulls: [
+  bulls:
     'Bulls n Bears description',
-  ],
-  lectures: [
+  lectures:
     'Lectures description',
-  ],
-  blitzkrieg: [
+  blitzkrieg:
     'Blitzkrieg description',
-  ],
-  wheels: [
+  wheels:
     'Wheels description',
-  ],
-  default: [
+  default:
     'I don\'t know what that is, but I can tell you about the events in Tathva 17',
-  ],
 };
 
 const EventSchedule = {
-  tathva: [
+  tathva:
     'Tathva is in the month of September or October. It is one of the biggest technical festivals in South India.',
-  ],
-  workshops: [
+  workshops:
     'Workshop time',
-  ],
-  adizya: [
+  adizya:
     'Adizya time',
-  ],
-  proshow: [
+  proshow:
     'Proshow time',
-  ],
-  bulls: [
+  bulls:
     'Bulls n Bears time',
-  ],
-  lectures: [
+  lectures:
     'Lectures time',
-  ],
-  blitzkrieg: [
+  blitzkrieg:
     'Blitzkrieg time',
-  ],
-  wheels: [
+  wheels:
     'Wheels time',
-  ],
-  default: [
+  default:
     'I don\'t know when that is, but I can tell you when the events in Tathva 17 are!',
-  ],
 };
 
 const DefaultReplies = [
@@ -69,8 +51,53 @@ const DefaultReplies = [
   "I\'ll get back to you on that",
 ]
 
+const greetings = {
+  hello: [
+    "Hey there, how can I help you?",
+    "Howdy",
+    "Hi, how can I help you?",
+    "Hello there",
+    "Heyy",
+    "Hola",
+    "Hii",
+  ],
+  sup: [
+    "Nothing much, wbu?",
+    "wassuuupp",
+    "waddup",
+  ],
+}
+
+const emotions = {
+  great: [
+      "Glad to hear that!",
+      "Great!",
+      "Cool",
+  ],
+  swear: [
+    "Now now",
+    "Language !!",
+    "You can keep going , idc what you say",
+    "I'm too hurt right now :(, if you say something mean again I'm gonna peace out",
+  ],
+  laugh: [
+    "haha hehe , this is how i sing it",
+    ":B 😂",
+    "Ha. Ha. Ha",
+    "Hilarious, I almost died of laughing",
+  ],
+  wow: [
+    "LOL",
+    "IKR",
+    "YEAA",
+  ],
+  emoticon: "😎😀😬😁🤣😂😃😄😆😇😉😊🙂😋",
+  cool: "😎😀😬😁🤣😂😃😄😆😇😉😊🙂😋",
+}
 module.exports = {
   desc: EventDescriptions,
   time: EventSchedule,
   default_replies: DefaultReplies,
+  greets: greetings,
+  emo: emotions,
 };
