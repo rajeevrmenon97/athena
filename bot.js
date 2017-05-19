@@ -72,22 +72,6 @@ const actions = {
     else {
       delete context.evnt;
     }
-
-    const hello = firstEntityValue(entities, 'wit/greetings');
-    if(hello){
-      context.hello = true;
-    }
-    else {
-      delete context.hello;
-    }
-
-    const bye = firstEntityValue(entities, 'wit/bye');
-    if(bye){
-      context.bye = true;
-    }
-    else {
-      delete context.bye;
-    }
     cb(context);
   },
 
