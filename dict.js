@@ -63,6 +63,10 @@ const EventSchedule = {
 const DefaultReplies = [
   "Sorry. I didn\'t get that",
   "I\'m a bit confused",
+  "I have no idea what you're saying",
+  "Please be more specific",
+  "I\'m not getting you",
+  "I\'ll get back to you on that",
 ]
 
 module.exports = {

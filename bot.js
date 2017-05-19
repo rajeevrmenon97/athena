@@ -83,22 +83,28 @@ const actions = {
 
       if(context.qstn == "what") {
         const text = db.desc[context.evnt || 'default'];
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[0];
       }
       else if (context.qstn == "when"){
         const text = db.time[context.evnt || 'default'];
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[0];
       }
       else {
-        context.anstext = "I'm confused";
+        context.anstext = "Please be more specific!";
       }
       cb(context);
 
   },
   ['default-reply'](sessionId, context, cb) {
 
+    if (context.evnt){
+      const text = db.desc[context.evnt || 'default'];
+      context.anstext = text[0];
+    }
+    else {
         const text = db.default_replies;
         context.anstext = text[Math.floor(Math.random() * text.length)];
+    }
         cb(context);
 
   },
