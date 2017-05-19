@@ -75,6 +75,7 @@ const emotions = {
       "Cool",
   ],
   swear: [
+    ":poop:"
     "Now now",
     "Language !!",
     "You can keep going , idc what you say",
@@ -82,7 +83,7 @@ const emotions = {
   ],
   laugh: [
     "haha hehe , this is how i sing it",
-    ":B 😂",
+    ":B :)",
     "Ha. Ha. Ha",
     "Hilarious, I almost died of laughing",
   ],
@@ -91,8 +92,12 @@ const emotions = {
     "IKR",
     "YEAA",
   ],
-  emoticon: "😎😀😬😁🤣😂😃😄😆😇😉😊🙂😋",
-  cool: "😎😀😬😁🤣😂😃😄😆😇😉😊🙂😋",
+  emoticon: [
+    ":)",":D",":P","O:)",";)","^_^","8|","<3","(y)",
+  ],
+  cool: [
+    ":)",":D",":P","O:)",";)","^_^","8|","<3","(y)",
+  ]
 }
 module.exports = {
   desc: EventDescriptions,
