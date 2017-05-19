@@ -75,7 +75,7 @@ const emotions = {
       "Cool",
   ],
   swear: [
-    ":poop:"
+    ":poop:",
     "Now now",
     "Language !!",
     "You can keep going , idc what you say",
