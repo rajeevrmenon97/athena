@@ -104,7 +104,7 @@ app.post('/webhook', (req, res) => {
       // Received a text message
 
       // Forward the message to the Wit.ai Bot Engine
-
+      console.log(msg);
       wit.runActions(
         sessionId, // the user's current session
         msg, // the user's message
