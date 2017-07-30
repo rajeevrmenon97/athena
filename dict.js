@@ -46,6 +46,27 @@ const EventSchedule = {
     'I don\'t know when that is, but I can tell you when the events in Tathva 17 are!',
 };
 
+const EventOrganizers = {
+  tathva:
+    'Tathva is conducted by energetic third year students of NIT Calicut',
+  workshops:
+    'Workshop coordinators',
+  adizya:
+    'Adizya coordinators',
+  proshow:
+    'Proshow coordinators',
+  bulls:
+    'Bulls n Bears coordinators',
+  lectures:
+    'Lectures coordinators',
+  blitzkrieg:
+    'Blitzkrieg coordinators',
+  wheels:
+    'Wheels coordinators',
+};
+
+
+
 const DefaultReplies = [
   "Sorry. I didn\'t get that",
   "I\'m a bit confused",
@@ -121,4 +142,5 @@ module.exports = {
   greets: greetings,
   emo: emotions,
   pers: personal,
+  org: EventOrganizers,
 };

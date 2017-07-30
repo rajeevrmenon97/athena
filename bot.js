@@ -112,6 +112,10 @@ const actions = {
         const text = db.time[context.evnt || 'default'];
         context.anstext = text;
       }
+      else if (context.qstn == "who"){
+        const text = db.org[context.evnt || 'default'];
+        context.anstext = text;
+      }
       else {
         context.anstext = "I cannot answer that questions right now.";
       }
