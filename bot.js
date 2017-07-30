@@ -152,7 +152,8 @@ const actions = {
         context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       else {
-        context.anstext = "Didn\'t get you there!";
+        const text = db.default_replies;
+        context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       cb(context);
 
@@ -164,7 +165,8 @@ const actions = {
         context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       else {
-        context.anstext = "Didn\'t get you there!";
+        const text = db.default_replies;
+        context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       cb(context);
 
