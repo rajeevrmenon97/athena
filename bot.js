@@ -16,6 +16,11 @@ const firstEntityValue = (entities, entity) => {
   return typeof val === 'object' ? val.value : val;
 };
 
+function getRandomNumber(quantity_of_nums){
+    var milliseconds = new Date().getMilliseconds();
+    return Math.floor(milliseconds * quantity_of_nums / 1000);
+}
+
 // Bot actions
 const actions = {
   say(sessionId, context, message, cb) {
@@ -105,7 +110,7 @@ const actions = {
         context.anstext = text;
       }
       else {
-        context.anstext = "Please be more specific!";
+        context.anstext = "I cannot answer that questions right now. But you can ask me more about tathva";
       }
       cb(context);
 
@@ -118,7 +123,7 @@ const actions = {
     }
     else {
         const text = db.default_replies;
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[getRandomNumber(text.length)];
     }
         cb(context);
 
@@ -128,11 +133,11 @@ const actions = {
 
       if(context.greet == "hello") {
         const text = db.greets[context.greet || "hello"];
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[getRandomNumber(text.length)];
       }
       else {
         const text = db.greets[context.greet || "sup"];
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[getRandomNumber(text.length)];
       }
       cb(context);
 
@@ -141,7 +146,7 @@ const actions = {
 
       if(context.senti) {
         const text = db.emo[context.senti || "cool"];
-        context.anstext = text[Math.floor(Math.random() * text.length)];
+        context.anstext = text[getRandomNumber(text.length)];
       }
       else {
         context.anstext = "Didn\'t get you there!";
