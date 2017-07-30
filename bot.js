@@ -88,6 +88,13 @@ const actions = {
     else {
       delete context.senti;
     }
+    const personal = firstEntityValue(entities, 'personal');
+    if (personal) {
+      context.personal = personal;
+    }
+    else {
+      delete context.personal;
+    }
     cb(context);
   },
 
@@ -140,9 +147,20 @@ const actions = {
   },
   ['get-emotion'](sessionId, context, cb) {
 
-      console.log(context.senti);
       if(context.senti) {
         const text = db.emo[context.senti || "cool"];
+        context.anstext = text[Math.floor(Math.random() * text.length)];
+      }
+      else {
+        context.anstext = "Didn\'t get you there!";
+      }
+      cb(context);
+
+  },
+  ['get-personal'](sessionId, context, cb) {
+
+      if(context.personal) {
+        const text = db.pers[context.personal];
         context.anstext = text[Math.floor(Math.random() * text.length)];
       }
       else {

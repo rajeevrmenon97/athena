@@ -103,10 +103,22 @@ const emotions = {
     "You're welcome :)",
   ]
 }
+
+const personal = {
+  identity: [
+    "My name is Athena, I\'m your virtual assistant for Tathva \'17",
+    "I\'m Athena and I\'m here to help you :)",
+  ],
+  creator: [
+    "I was created by a smart developer xP",
+    "I cannot say that to you :o",
+  ]
+}
 module.exports = {
   desc: EventDescriptions,
   time: EventSchedule,
   default_replies: DefaultReplies,
   greets: greetings,
   emo: emotions,
+  pers: personal,
 };
