@@ -101,6 +101,9 @@ const emotions = {
   ],
   cool: [
     ":)",":D",":P","O:)",";)","^_^","8|","<3","(y)",
+  ],
+  thanks: [
+    "You're welcome :)",
   ]
 }
 module.exports = {
